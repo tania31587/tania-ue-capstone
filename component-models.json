@@ -270,6 +270,7 @@
         "value": ""
       },
       {
+        "id": "eyebrow",
         "component": "text",
         "valueType": "string",
         "name": "eyebrow",

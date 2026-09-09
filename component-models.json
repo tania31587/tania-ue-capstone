@@ -207,10 +207,17 @@
         "value": ""
       },
       {
-        "component": "richtext",
-        "name": "text",
+        "component": "text",
+        "name": "textBold",
         "value": "",
-        "label": "Text",
+        "label": "TextBold",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "textSmall",
+        "value": "",
+        "label": "TextSmall",
         "valueType": "string"
       }
     ]

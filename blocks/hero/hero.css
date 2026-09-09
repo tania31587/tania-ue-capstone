@@ -9,6 +9,18 @@
   min-height: 300px;
 }
 
+.hero-eyebrow {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #ef6b10;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
 .hero h1 {
   max-width: 1200px;
   margin-left: auto;
@@ -30,7 +42,7 @@
   height: 100%;
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   .hero {
     padding: 40px 32px;
   }

@@ -47,6 +47,34 @@
           "value": "",
           "label": "TextSmall",
           "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "primaryLabel",
+          "value": "",
+          "label": "Primary CTA",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "primaryLink",
+          "value": "",
+          "label": "Primary Link",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "secondaryLabel",
+          "value": "",
+          "label": "Secondary CTA",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "secondaryLink",
+          "value": "",
+          "label": "Secondary Link",
+          "valueType": "string"
         }
       ]
     }

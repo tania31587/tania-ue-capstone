@@ -43,6 +43,76 @@
           "multi": false
         },
         {
+          "component": "text",
+          "valueType": "string",
+          "name": "imageAlt",
+          "label": "Alt",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "tag",
+          "label": "Tag",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "sectionTitle",
+          "label": "Section Title",
+          "value": ""
+        },
+        {
+          "component": "textarea",
+          "valueType": "string",
+          "name": "cardDescription",
+          "label": "Card Description",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "buttonLabel",
+          "label": "Button Label",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "buttonLink",
+          "label": "Button Link",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "heading",
+          "label": "Heading",
+          "value": ""
+        },
+        {
+          "component": "textarea",
+          "valueType": "string",
+          "name": "description",
+          "label": "Description",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "buttonLabel",
+          "label": "Button Label",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "buttonLink",
+          "label": "Button Link",
+          "value": ""
+        },
+        {
           "component": "richtext",
           "name": "text",
           "value": "",

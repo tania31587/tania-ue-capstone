@@ -34,54 +34,76 @@
   position: relative;
   z-index: 2;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 120px 32px;
-  color: #fff;
+  padding: 120px 48px;
+  color: white;
 }
+
+/* Eyebrow */
 
 .hero-eyebrow {
   display: inline-block;
-  background: #ef6b10;
+  background: #f36f21;
   color: #fff;
-  padding: 6px 12px;
+  padding: 8px 16px;
   border-radius: 999px;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.hero-eyebrow p {
+  margin: 0;
+}
+
+/* Title */
+
+.hero-title {
+  background: transparent;
 }
 
 .hero-title h1 {
-  margin: 16px 0;
+  margin: 0;
+  color: #fff;
   font-size: 72px;
   font-weight: 800;
   line-height: 1;
-  color: #fff;
 }
 
+/* Description */
+
 .hero-description {
+  margin-top: 20px;
   max-width: 650px;
-  font-size: 22px;
-  color: #fff;
-  margin-bottom: 24px;
 }
+
+.hero-description p,
+.hero-description h5 {
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* CTAs */
 
 .hero-actions {
   display: flex;
   gap: 16px;
-  flex-wrap: wrap;
+  margin-top: 32px;
 }
 
 .hero-btn {
-  background: #fff;
-  color: #111;
-  padding: 12px 24px;
-  border-radius: 999px;
-  font-weight: 700;
-  cursor: pointer;
+  display: inline-flex;
 }
 
 .hero-btn p {
   margin: 0;
+  background: white;
+  color: black;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 700;
 }
 
 @media (width <= 768px) {

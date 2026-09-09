@@ -35,10 +35,10 @@
           "value": ""
         },
         {
-          "component": "text",
-          "name": "textBold",
+          "component": "richtext",
+          "name": "textBig",
           "value": "",
-          "label": "TextBold",
+          "label": "TextBig",
           "valueType": "string"
         },
         {

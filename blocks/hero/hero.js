@@ -1,46 +1,66 @@
 export default function decorate(block) {
-  // Find tag field
-  const tag = block.querySelector('[data-aue-prop="tag"]');
-  if (tag && tag.textContent.trim()) {
-    const span = document.createElement('span');
-    span.classList.add('hero-tag');
-    span.textContent = tag.textContent.trim();
-    tag.closest('div').replaceWith(span);
-  }
+    const rows = [...block.children];
 
-  // Find fields by data-aue-prop
-  const buttonOneLabel = block.querySelector('[data-aue-prop="buttonOneLable"]');
-  const buttonTwoLabel = block.querySelector('[data-aue-prop="buttonTwoLabel"]');
+    const titleRow = rows.find((row) => row.querySelector('h1'));
+    const descriptionRow = rows.find((row) => row.querySelector('h5'));
+    const eyebrowRow = rows.find(
+        (row) => row.textContent.trim() === 'WKND ADVENTURES',
+    );
 
-  // Find link rows
-  const allLinks = [...block.querySelectorAll('a')];
+    if (eyebrowRow) {
+        eyebrowRow.classList.add('hero-eyebrow');
+    }
 
-  const buttonWrapper = document.createElement('div');
-  buttonWrapper.classList.add('hero-buttons');
+    if (titleRow) {
+        titleRow.classList.add('hero-title');
+    }
 
-  // Button One
-  if (buttonOneLabel && allLinks[0]) {
-    const btn1 = document.createElement('a');
-    btn1.href = allLinks[0].href;
-    btn1.textContent = buttonOneLabel.textContent.trim();
-    btn1.classList.add('button', 'primary');
-    buttonWrapper.appendChild(btn1);
-    buttonOneLabel.closest('div').remove();
-    allLinks[0].closest('div').remove();
-  }
+    if (descriptionRow) {
+        descriptionRow.classList.add('hero-description');
+    }
+    
+    const labelRows = rows.filter((row) => {
+        const txt = row.textContent.trim().toUpperCase();
 
-  // Button Two
-  if (buttonTwoLabel && allLinks[1]) {
-    const btn2 = document.createElement('a');
-    btn2.href = allLinks[1].href;
-    btn2.textContent = buttonTwoLabel.textContent.trim();
-    btn2.classList.add('button', 'primary');
-    buttonWrapper.appendChild(btn2);
-    buttonTwoLabel.closest('div').remove();
-    allLinks[1].closest('div').remove();
-  }
+        return txt === 'AMERICAS' || txt === 'EUROPE';
+    });
 
-  if (buttonWrapper.children.length > 0) {
-    block.appendChild(buttonWrapper);
-  }
+    const linkRows = rows.filter((row) =>
+        row.textContent.trim().startsWith('http'),
+    );
+
+    if (labelRows.length === 2 && linkRows.length === 2) {
+        const actions = document.createElement('div');
+        actions.className = 'hero-actions';
+
+        const primaryBtn = document.createElement('a');
+        primaryBtn.className = 'hero-button';
+        primaryBtn.textContent = labelRows[0].textContent.trim();
+        primaryBtn.href = linkRows[0].textContent.trim();
+
+        const secondaryBtn = document.createElement('a');
+        secondaryBtn.className = 'hero-button';
+        secondaryBtn.textContent = labelRows[1].textContent.trim();
+        secondaryBtn.href = linkRows[1].textContent.trim();
+
+        actions.append(primaryBtn);
+        actions.append(secondaryBtn);
+
+        labelRows.forEach((row) => row.remove());
+        linkRows.forEach((row) => row.remove());
+
+        block.append(actions);
+    }
+    [...block.children].forEach((el) => {
+        if (
+            el !== actions &&
+            !el.textContent.trim() &&
+            !el.querySelector('img') &&
+            !el.querySelector('picture') &&
+            !el.querySelector('h1') &&
+            !el.querySelector('h5')
+        ) {
+            el.remove();
+        }
+    });
 }

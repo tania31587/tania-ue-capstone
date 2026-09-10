@@ -331,8 +331,7 @@ main .section.highlight {
 /* section region */
 .section.region-section {
   background-color: var(--orange-color);
-  /* padding: 21px 100px; */
-  padding: 70px 24px;
+  padding: 21px 100px;
 }
 
 .section.region-section h1,
@@ -340,8 +339,6 @@ main .section.highlight {
 .section.region-section h3,
 .section.region-section p,
 .section.region-section strong {
-  font-size: 56px;
-  font-weight: 700;
   color: black;
   display: flex;
   justify-content: center;

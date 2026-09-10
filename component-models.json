@@ -136,6 +136,42 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Region",
+            "value": "region-section"
+          },
+          {
+            "name": "Black",
+            "value": "black-section"
+          },
+          {
+            "name": "Beige",
+            "value": "beige-section"
+          },
+          {
+            "name": "W-circuit",
+            "value": "w-circuit-section"
+          },
+          {
+            "name": "Americas",
+            "value": "americas-section"
+          },
+          {
+            "name": "Europe",
+            "value": "europe-section"
+          },
+          {
+            "name": "Permits",
+            "value": "permits-section"
+          },
+          {
+            "name": "Editors",
+            "value": "editors-section"
+          },
+          {
+            "name": "Brief-planning",
+            "value": "brief-planning-section"
           }
         ]
       }

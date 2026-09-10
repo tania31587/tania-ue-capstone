@@ -248,7 +248,7 @@ button.button.primary:disabled:focus-visible {
 
 a.button.secondary,
 button.button.secondary {
-   box-shadow: 3px 3px 0 var(--orange-color);
+  box-shadow: 3px 3px 0 var(--orange-color);
   border-color: var(--text-color);
   background-color: black;
   color: var(--light-color);
@@ -468,6 +468,11 @@ main .section.highlight {
 .section.brief-planning-section h3,
 .section.brief-planning-section p {
   color: white;
+}
+
+.section.brief-planning-section h1,
+.section.brief-planning-section h2,
+.section.brief-planning-section p {
   text-align: center;
 }
 

@@ -6,31 +6,24 @@
 
 .hero {
   position: relative;
-  min-height: 320px;
-  overflow: hidden;
-  font-family:
-    Montserrat,
-    'Avenir Next',
-    Arial,
-    sans-serif;
+  min-height: 300px;
+  padding: 40px 24px;
 }
 
 /* IMAGE */
 
-.hero>div:first-child {
+.hero picture {
   position: absolute;
+  z-index: -1;
   inset: 0;
+  object-fit: cover;
+  box-sizing: border-box;
 }
 
-.hero>div:first-child picture,
-.hero>div:first-child img {
+.hero img {
+  object-fit: cover;
   width: 100%;
   height: 100%;
-  display: block;
-}
-
-.hero>div:first-child img {
-  object-fit: cover;
 }
 
 /* OVERLAY */
@@ -66,9 +59,6 @@
   align-items: center;
   height: 24px;
   padding: 0 12px;
-  font-family:
-    Montserrat,
-    sans-serif;
   background: #ef7d22;
   color: #fff;
   border-radius: 999px;
@@ -81,11 +71,10 @@
 /* TITLE */
 
 .hero-title h1 {
-  color: #fff;
-  margin: 8px 0 14px;
-  font-family:
-    Montserrat,
-    sans-serif;
+  color: var(--background-color);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 700;
   font-size: 58px;
   line-height: 1;
@@ -99,9 +88,6 @@
   margin: 0;
   max-width: 460px;
   color: #fff;
-  font-family:
-    Montserrat,
-    sans-serif;
   font-size: 15px;
   line-height: 1.65;
   font-weight: 400;
@@ -112,7 +98,8 @@
 .hero-actions {
   display: flex;
   gap: 12px;
-  margin-top: 18px;
+  margin-top: 16px;
+  flex-wrap: wrap;
 }
 
 .hero-actions>div {
@@ -124,9 +111,6 @@
   min-width: 110px;
   height: 44px;
   display: flex;
-  font-family:
-    Montserrat,
-    sans-serif;
   align-items: center;
   justify-content: center;
   background: #fff;
@@ -148,10 +132,6 @@
 }
 
 @media (max-width: 768px) {
-
-  .hero {
-    min-height: 420px;
-  }
 
   .hero-eyebrow,
   .hero-title,

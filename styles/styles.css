@@ -401,7 +401,7 @@ main .section.highlight {
   padding: 21px 100px;
 }
 
-.section.americas-section .cards .cards-card-body p {
+.section.americas-section .cards .cards-card-body p[eyebrow] {
   display: inline-block;
   background-color: var(--orange-color);
   color: white;

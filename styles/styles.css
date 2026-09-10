@@ -343,4 +343,23 @@ main .section.highlight {
   display: flex;
   justify-content: center;
 }
- 
+
+/* section circuit */
+
+.section.w-circuit-section {
+  background-color: var(--beige-color);
+  padding: 21px 100px;
+}
+
+.section.w-circuit-section h1,
+.section.w-circuit-section h2,
+.section.w-circuit-section h3,
+.section.w-circuit-section p {
+  color: black;
+  display: flex;
+  justify-content: left;
+}
+
+.section.w-circuit-section img {
+  border-radius: 35px;
+}

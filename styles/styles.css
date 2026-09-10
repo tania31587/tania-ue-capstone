@@ -401,6 +401,18 @@ main .section.highlight {
   padding: 21px 100px;
 }
 
+.section.americas-section .cards .cards-card-body {
+  display: inline-block;
+  background-color: var(--orange-color);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
 /* section europe  */
 
 .section.europe-section {

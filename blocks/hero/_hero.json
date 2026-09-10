@@ -36,18 +36,17 @@
           "value": ""
         },
         {
-          "id": "eyebrow",
           "component": "text",
           "valueType": "string",
-          "name": "eyebrow",
-          "label": "Eyebrow",
+          "name": "tag",
+          "label": "Tag",
           "value": ""
         },
         {
           "component": "richtext",
-          "name": "textBig",
+          "name": "textBold",
           "value": "",
-          "label": "TextBig",
+          "label": "TextBold",
           "valueType": "string"
         },
         {
@@ -59,31 +58,31 @@
         },
         {
           "component": "text",
-          "name": "primaryLabel",
-          "value": "",
-          "label": "Primary CTA",
-          "valueType": "string"
+          "valueType": "string",
+          "name": "buttonOneLabel",
+          "label": "Button One Label",
+          "value": ""
         },
         {
           "component": "text",
-          "name": "primaryLink",
-          "value": "",
-          "label": "Primary Link",
-          "valueType": "string"
+          "valueType": "string",
+          "name": "buttonOneLink",
+          "label": "Button One Link",
+          "value": ""
         },
         {
           "component": "text",
-          "name": "secondaryLabel",
-          "value": "",
-          "label": "Secondary CTA",
-          "valueType": "string"
+          "valueType": "string",
+          "name": "buttonTwoLabel",
+          "label": "Button Two Label",
+          "value": ""
         },
         {
           "component": "text",
-          "name": "secondaryLink",
-          "value": "",
-          "label": "Secondary Link",
-          "valueType": "string"
+          "valueType": "string",
+          "name": "buttonTwoLink",
+          "label": "Button Two Link",
+          "value": ""
         }
       ]
     }

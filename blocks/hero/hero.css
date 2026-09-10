@@ -6,8 +6,12 @@
 
 .hero {
   position: relative;
-  min-height: 270px;
+  min-height: 300px;
   padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
 /* IMAGE */
@@ -32,7 +36,11 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgb(0 0 0 / 40%);
+  background:
+    linear-gradient(90deg,
+      rgb(0 0 0 / 55%) 0%,
+      rgb(0 0 0 / 30%) 40%,
+      rgb(0 0 0 / 10%) 100%);
   z-index: 1;
 }
 
@@ -42,28 +50,27 @@
 .hero-title,
 .hero-description,
 .hero-actions {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 140px;
-  padding-right: 140px;
+  max-width: 980px;
+  padding-left: 60px;
+  position: relative;
+  z-index: 2;
 }
 
 /* EYEBROW */
 
 .hero-eyebrow {
-  margin-top: 45px;
+  margin-top: 0px;
 }
 
 .hero-eyebrow p {
   display: inline-flex;
   align-items: center;
-  height: 24px;
-  padding: 0 12px;
+  margin: 0;
+  padding: 4px 10px;
   background: #ef7d22;
   color: #fff;
   border-radius: 999px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -72,13 +79,13 @@
 /* TITLE */
 
 .hero-title h1 {
-  color: var(--background-color);
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  color: #fff;
+  max-width: 420px;
   font-weight: 700;
-  font-size: 52px;
-  line-height: .95;
+  font-size: 55px;
+  line-height: 1.6;
+  text-shadow: 0 2px 4px rgb(0 0 0 / 40%);
+  text-transform: uppercase;
 }
 
 /* DESCRIPTION */
@@ -91,28 +98,24 @@
   font-size: 15px;
   line-height: 1.65;
   font-weight: 400;
+  text-shadow: 0 1px 3px rgb(0 0 0 / 40%);
 }
 
 /* BUTTONS */
 
 .hero-actions {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   margin-top: 20px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 140px;
-  padding-right: 140px;
 }
 
 .hero-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 92px;
+  min-width: 90px;
   height: 32px;
-  padding: 0 18px;
+  padding: 0 16px;
   background: #fff;
   color: #222;
   text-decoration: none;

@@ -248,9 +248,10 @@ button.button.primary:disabled:focus-visible {
 
 a.button.secondary,
 button.button.secondary {
+   box-shadow: 3px 3px 0 var(--orange-color);
   border-color: var(--text-color);
-  background-color: transparent;
-  color: var(--text-color);
+  background-color: black;
+  color: var(--light-color);
 }
 
 a.button.secondary:hover,
@@ -444,10 +445,6 @@ main .section.highlight {
   margin-right: 16px;
 }
 
-.section.editors-section .default-content-wrapper {
-  text-align: center;
-}
-
 /* section planning */
 
 .section.brief-planning-section {
@@ -464,6 +461,14 @@ main .section.highlight {
 .section.brief-planning-section p.button-wrapper .button {
   background-color: var(--light-color);
   color: var(--black-color);
+}
+
+.section.brief-planning-section h1,
+.section.brief-planning-section h2,
+.section.brief-planning-section h3,
+.section.brief-planning-section p {
+  color: white;
+  text-align: center;
 }
 
 .section.brief-planning-section h1,

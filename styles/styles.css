@@ -484,7 +484,7 @@ main .section.highlight {
   text-align: left;
 }
 
-.section.brief-planning-cards .cards>ul>li {
+.section.brief-planning-section .cards-wrapper .cards>ul>li {
   background-color: var(--grey-color);
   color: white;
   justify-self: left;

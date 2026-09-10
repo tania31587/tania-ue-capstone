@@ -393,13 +393,13 @@ main .section.highlight {
 }
 
 
-/* section america-cards */
+/* section america */
 
-.section.america-section {
+.section.americas-section {
   padding: 21px 100px;
 }
 
-/* section europe-cards */
+/* section europe  */
 
 .section.europe-section {
   background-color: var(--beige-color);

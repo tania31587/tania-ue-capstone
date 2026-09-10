@@ -4,14 +4,7 @@ export default function decorate(block) {
     const titleRow = rows.find((row) => row.querySelector('h1'));
     const descriptionRow = rows.find((row) => row.querySelector('h5'));
 
-    const ctas = rows.filter((row) => {
-        const text = row.textContent.trim();
-
-        return [
-            'AMERICAS',
-            'EUROPE',
-        ].includes(text.toUpperCase());
-    });
+    const ctas = rows.filter((row) => row.querySelector('a'));
 
     const eyebrowRow = rows.find(
         (row) => row.textContent.trim() === 'WKND ADVENTURES',
@@ -29,14 +22,31 @@ export default function decorate(block) {
         descriptionRow.classList.add('hero-description');
     }
 
+    let actions;
+
     if (ctas.length) {
-        const actions = document.createElement('div');
+        actions = document.createElement('div');
         actions.className = 'hero-actions';
 
-        ctas.forEach((cta) => actions.append(cta));
+        ctas.forEach((cta) => {
+            const link = cta.querySelector('a');
+
+            if (!link) return;
+
+            const button = document.createElement('a');
+
+            button.href = link.href;
+            button.textContent = link.textContent.trim();
+            button.className = 'hero-button';
+
+            actions.append(button);
+
+            cta.remove();
+        });
 
         block.append(actions);
     }
+
     [...block.children].forEach((el) => {
         if (
             el !== actions &&

@@ -6,7 +6,7 @@
 
 .hero {
   position: relative;
-  min-height: 300px;
+  min-height: 270px;
   padding: 40px 24px;
 }
 
@@ -42,10 +42,11 @@
 .hero-title,
 .hero-description,
 .hero-actions {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-  margin-left: 100px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 140px;
+  padding-right: 140px;
 }
 
 /* EYEBROW */
@@ -76,9 +77,8 @@
   margin-left: auto;
   margin-right: auto;
   font-weight: 700;
-  font-size: 58px;
-  line-height: 1;
-  letter-spacing: -0.03em;
+  font-size: 52px;
+  line-height: .95;
 }
 
 /* DESCRIPTION */
@@ -97,36 +97,40 @@
 
 .hero-actions {
   display: flex;
-  gap: 12px;
-  margin-top: 18px;
-  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 140px;
+  padding-right: 140px;
 }
 
 .hero-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 120px;
-  height: 36px;
-  padding: 0 20px;
+  min-width: 92px;
+  height: 32px;
+  padding: 0 18px;
   background: #fff;
-  color: #111;
+  color: #222;
   text-decoration: none;
   border-radius: 999px;
-  border: 2px solid #ef7d22;
+  border: 1px solid #d9d9d9;
   font-size: 12px;
   font-weight: 700;
+  letter-spacing: .06em;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  transition: all 0.2s ease;
+  box-shadow:
+    0 2px 0 #ef7d22,
+    0 1px 4px rgb(0 0 0 / 10%);
 }
 
 .hero-button:hover {
-  background: #fff;
-  color: #111;
   text-decoration: none;
-  transform: translateY(-1px);
-} 
+  color: #222;
+}
 
 @media (max-width: 768px) {
 

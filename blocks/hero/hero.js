@@ -1,62 +1,61 @@
 export default function decorate(block) {
-    const rows = [...block.children];
+  const rows = [...block.children];
 
-    const titleRow = rows.find((row) => row.querySelector('h1'));
-    const descriptionRow = rows.find((row) => row.querySelector('h5'));
+  if (rows.length < 9) return;
 
-    const ctas = rows.filter((row) => row.querySelector('a'));
+  const eyebrow = rows[2];
+  const title = rows[3];
+  const description = rows[4];
 
-    const eyebrowRow = rows.find(
-        (row) => row.textContent.trim() === 'WKND ADVENTURES',
-    );
+  eyebrow.classList.add('hero-eyebrow');
+  title.classList.add('hero-title');
+  description.classList.add('hero-description');
 
-    if (eyebrowRow) {
-        eyebrowRow.classList.add('hero-eyebrow');
+  const primaryLabel = rows[5]?.textContent.trim();
+  const primaryLink = rows[6]?.textContent.trim();
+
+  const secondaryLabel = rows[7]?.textContent.trim();
+  const secondaryLink = rows[8]?.textContent.trim();
+
+  const actions = document.createElement('div');
+  actions.className = 'hero-actions';
+
+  if (primaryLabel && primaryLink) {
+    const btn = document.createElement('a');
+    btn.className = 'hero-button';
+    btn.textContent = primaryLabel;
+    btn.href = primaryLink;
+    actions.append(btn);
+  }
+
+  if (secondaryLabel && secondaryLink) {
+    const btn = document.createElement('a');
+    btn.className = 'hero-button';
+    btn.textContent = secondaryLabel;
+    btn.href = secondaryLink;
+    actions.append(btn);
+  }
+
+  block.append(actions);
+
+  /* remove imageAlt + CTA/link rows */
+  [rows[1], rows[5], rows[6], rows[7], rows[8]]
+    .filter(Boolean)
+    .forEach((el) => el.remove());
+
+  /* remove empty rows */
+  [...block.children].forEach((el) => {
+    if (
+      !el.textContent.trim() &&
+      !el.querySelector('img') &&
+      !el.querySelector('picture') &&
+      !el.querySelector('h1') &&
+      !el.querySelector('h2') &&
+      !el.querySelector('h3') &&
+      !el.querySelector('h4') &&
+      !el.querySelector('h5')
+    ) {
+      el.remove();
     }
-
-    if (titleRow) {
-        titleRow.classList.add('hero-title');
-    }
-
-    if (descriptionRow) {
-        descriptionRow.classList.add('hero-description');
-    }
-
-    let actions;
-
-    if (ctas.length) {
-        actions = document.createElement('div');
-        actions.className = 'hero-actions';
-
-        ctas.forEach((cta) => {
-            const link = cta.querySelector('a');
-
-            if (!link) return;
-
-            const button = document.createElement('a');
-
-            button.href = link.href;
-            button.textContent = link.textContent.trim();
-            button.className = 'hero-button';
-
-            actions.append(button);
-
-            cta.remove();
-        });
-
-        block.append(actions);
-    }
-
-    [...block.children].forEach((el) => {
-        if (
-            el !== actions &&
-            !el.textContent.trim() &&
-            !el.querySelector('img') &&
-            !el.querySelector('picture') &&
-            !el.querySelector('h1') &&
-            !el.querySelector('h5')
-        ) {
-            el.remove();
-        }
-    });
+  });
 }

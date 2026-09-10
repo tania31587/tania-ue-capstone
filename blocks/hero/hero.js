@@ -18,19 +18,21 @@ export default function decorate(block) {
     if (descriptionRow) {
         descriptionRow.classList.add('hero-description');
     }
-    
+
     const labelRows = rows.filter((row) => {
         const txt = row.textContent.trim().toUpperCase();
 
         return txt === 'AMERICAS' || txt === 'EUROPE';
     });
 
-    const linkRows = rows.filter((row) =>
-        row.textContent.trim().startsWith('http'),
+    const linkRows = rows.filter(
+        (row) => row.textContent.trim().startsWith('http'),
     );
 
+    let actions;
+
     if (labelRows.length === 2 && linkRows.length === 2) {
-        const actions = document.createElement('div');
+        actions = document.createElement('div');
         actions.className = 'hero-actions';
 
         const primaryBtn = document.createElement('a');
@@ -51,6 +53,7 @@ export default function decorate(block) {
 
         block.append(actions);
     }
+
     [...block.children].forEach((el) => {
         if (
             el !== actions &&

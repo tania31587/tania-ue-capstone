@@ -496,7 +496,7 @@ main .section.highlight {
   text-align: left;
 }
 
-.section.brief-planning-section .cards>p {
+.section.brief-planning-section .cards>ul>li {
   background-color: var(--grey-color);
   color: white;
   justify-self: left;

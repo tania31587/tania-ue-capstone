@@ -297,7 +297,7 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 40px 0;
+  margin: 0;
 }
 
 main > .section > div {
@@ -322,4 +322,20 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+/* section region */
+.section.orange-section {
+  background-color: var(--orange-color);
+  padding: 21px 100px;
+}
+
+.section.orange-section h1,
+.section.orange-section h2,
+.section.orange-section h3,
+.section.orange-section p,
+.section.orange-section strong {
+  color: black;
+  display: flex;
+  justify-content: center;
 }

@@ -471,11 +471,12 @@ main .section.highlight {
   text-align: center;
 }
 
-.section.brief-planning-section h1,
-.section.brief-planning-section h2,
-.section.brief-planning-section h3,
-.section.brief-planning-section p {
-  color: white;
+.section.brief-planning-section .cards-wrapper h1,
+.section.brief-planning-section .cards-wrapper h2,
+.section.brief-planning-section .cards-wrapper h3,
+.section.brief-planning-section .cards-wrapper p {
+  color: #000;
+  text-align: left;
 }
 
 .section.brief-planning-cards .cards>ul>li {

@@ -29,3 +29,27 @@ npm i
 ```sh
 npm run lint
 ```
+
+Blocks Used
+-----------
+Hero
+Columns
+Cards
+Footer
+
+Section Layout
+--------------
+Hero
+Explore By Region
+Feature
+Americas
+Europe
+Permits
+Editors
+CTA
+Planning
+Footer
+
+Known Limitations
+-----------------
+None

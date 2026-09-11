@@ -51,11 +51,10 @@
 .hero-title,
 .hero-description,
 .hero-actions {
-    max-width: 980px;
     position: relative;
     z-index: 2;
-    /* max-width: 1180px; */
-    padding-left: 210px;
+    max-width: var(--content-width);
+    padding-left: var(--content-offset);
 }
 
 
@@ -139,45 +138,48 @@
     color: #222;
 }
 
-@media (max-width: 768px) {
+@media (width >=900px) {
+    .hero {
+        padding: 40px 32px;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 767px) {
+    .hero::before {
+        z-index: initial;
+        background: initial;
+    }
     .hero-eyebrow,
     .hero-title,
     .hero-description,
     .hero-actions {
-        max-width: 100%;
-        margin: 0;
-        padding-left: 150px;
-        padding-right: 24px;
+        margin: 0 auto;
+        padding-left: inherit;
+        z-index: initial;
     }
     .hero-title h1 {
         font-size: 42px;
-        line-height: 1;
     }
     .hero-description p,
     .hero-description h5 {
         max-width: 100%;
-        width: 100%;
-    }
-    .hero-actions {
-        flex-wrap: wrap;
-        justify-content: center;
     }
 }
 
-@media (max-width: 468px) {
+
+/* Laptop */
+
+@media (min-width: 1024px) and (max-width: 1439px) {
     .hero-eyebrow,
     .hero-title,
     .hero-description,
     .hero-actions {
-        max-width: 100%;
-        margin: 0;
-        padding-left: 50px;
-        padding-right: 24px;
-    }
-}
-
-@media (width >=900px) {
-    .hero {
-        padding: 40px 32px;
+        position: relative;
+        z-index: 2;
+        max-width: var(--content-width);
+        padding-left: 120px;
     }
 }

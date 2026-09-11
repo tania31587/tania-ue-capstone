@@ -44,6 +44,7 @@
     --page-side-padding: 40px;
     --page-side-padding-tablet: 28px;
     --page-side-padding-mobile: 20px;
+    --content-offset: 210px;
 }
 
 *,
@@ -359,12 +360,6 @@ main>.section:first-of-type {
     margin-top: 0;
 }
 
-@media (width >=900px) {
-    main>.section>div {
-        padding: 0 32px;
-    }
-}
-
 
 /* section metadata */
 
@@ -475,8 +470,8 @@ main .section.highlight {
 .planning-section .cards-wrapper,
 .footer .columns-wrapper,
 .footer .default-content-wrapper {
-    max-width: var(--wknd-content-width);
-    margin-inline: auto;
+    max-width: var(--content-width);
+    margin: 0 auto;
 }
 
 
@@ -495,9 +490,11 @@ main .section.highlight {
     padding: 21px 100px;
 }
 
+
+/* 
 .permits-section .default-content-wrapper {
     max-width: 760px;
-}
+} */
 
 .section.permits-section h1,
 .section.permits-section h2,
@@ -517,9 +514,10 @@ main .section.highlight {
     padding: 21px 100px;
 }
 
-.editors-section .default-content-wrapper {
+
+/* .editors-section .default-content-wrapper {
     max-width: 760px;
-}
+} */
 
 .section.editors-section h1,
 .section.editors-section h2,
@@ -596,13 +594,13 @@ main .section.highlight {
 main .section>.default-content-wrapper,
 main .section>.columns-wrapper,
 main .section>.cards-wrapper {
-    width: min( calc(100% - (var(--page-side-padding) * 2)), var(--page-max-width));
+    width: min(calc(100% - (var(--page-side-padding) * 2)), var(--page-max-width));
     margin-right: auto;
     margin-left: auto;
 }
 
 .section>div {
-    width: min( calc(100% - (var(--padding-desktop) * 2)), var(--content-width));
+    width: min(calc(100% - (var(--padding-desktop) * 2)), var(--content-width));
     margin: 0 auto;
 }
 
@@ -645,5 +643,21 @@ main .highlight {
     .footer .columns>div {
         padding: 0 24px;
         grid-template-columns: 1fr;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 767px) {
+    .section.region-section,
+    .section.w-circuit-section,
+    .section.americas-section,
+    .section.europe-section,
+    .section.permits-section,
+    .section.editors-section,
+    .section.brief-planning-section {
+        padding-left: initial;
+        padding-right: initial;
     }
 }

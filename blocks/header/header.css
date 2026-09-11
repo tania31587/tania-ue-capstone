@@ -274,3 +274,13 @@ header nav .nav-sections ul>li>ul>li {
 header nav .nav-tools {
     grid-area: tools;
 }
+
+
+/* Mobile */
+
+@media (max-width: 767px) {
+    .header #nav {
+        display: flex;
+        justify-content: space-around;
+    }
+}

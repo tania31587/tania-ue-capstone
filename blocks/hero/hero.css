@@ -40,8 +40,6 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, rgb(0 0 0 / 55%) 0%, rgb(0 0 0 / 30%) 40%, rgb(0 0 0 / 10%) 100%);
-    z-index: 1;
 }
 
 
@@ -52,7 +50,6 @@
 .hero-description,
 .hero-actions {
     position: relative;
-    z-index: 2;
     max-width: var(--content-width);
     padding-left: var(--content-offset);
 }
@@ -178,7 +175,6 @@
     .hero-description,
     .hero-actions {
         position: relative;
-        z-index: 2;
         max-width: var(--content-width);
         padding-left: 120px;
     }

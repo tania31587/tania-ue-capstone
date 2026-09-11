@@ -486,7 +486,7 @@ main .section.highlight {
 /* section permits */
 
 .section.permits-section {
-    background-color: var(--black-color);
+    background: linear-gradient(90deg, #02110d 0%, #041612 50%, #02110d 100%);
     padding: 21px 100px;
 }
 
@@ -538,7 +538,7 @@ main .section.highlight {
 /* section planning */
 
 .section.brief-planning-section {
-    background-color: var(--black-color);
+    background: linear-gradient(90deg, #02110d 0%, #041612 50%, #02110d 100%);
     padding: 21px 100px;
     border-bottom: 6px solid var(--orange-color);
 }

@@ -83,3 +83,10 @@ footer {
     gap: 12px;
   }
 }
+
+@media (width >= 900px) {
+  footer .footer > div {
+    padding: 40px 32px 24px;
+    text-align: center;
+  }
+}

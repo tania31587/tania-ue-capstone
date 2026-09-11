@@ -1,113 +1,51 @@
 {
-  "definitions": [
-    {
-      "title": "Columns",
-      "id": "columns",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/columns/v1/columns",
-            "template": {
-              "columns": "2",
-              "rows": "1"
+    "definitions": [{
+        "title": "Columns",
+        "id": "columns",
+        "plugins": {
+            "xwalk": {
+                "page": {
+                    "resourceType": "core/franklin/components/columns/v1/columns",
+                    "template": {
+                        "columns": "2",
+                        "rows": "1"
+                    }
+                }
             }
-          }
         }
-      }
-    }
-  ],
-  "models": [
-    {
-      "id": "columns",
-      "fields": [
-        {
-          "component": "reference",
-          "valueType": "string",
-          "name": "name",
-          "value": "",
-          "label": "Name"
-        },        
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "heading",
-          "label": "Heading",
-          "value": ""
-        },        
-        {
-          "component": "textarea",
-          "valueType": "string",
-          "name": "description",
-          "label": "Description",
-          "value": ""
-        },                
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "buttonLabel",
-          "label": "Button Label",
-          "value": ""
+    }],
+    "models": [{
+        "id": "columns",
+        "fields": [{
+                "component": "text",
+                "valueType": "number",
+                "name": "columns",
+                "value": "",
+                "label": "Columns"
+            },
+            {
+                "component": "text",
+                "valueType": "number",
+                "name": "rows",
+                "value": "",
+                "label": "Rows"
+            }
+        ]
+    }],
+    "filters": [{
+            "id": "columns",
+            "components": [
+                "column"
+            ]
         },
         {
-          "component": "text",
-          "valueType": "string",
-          "name": "buttonLink",
-          "label": "Button Link",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "image",
-          "label": "Image",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "imageAlt",
-          "label": "Image Alt Text",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "imagePosition",
-          "label": "Image Position (left or right)",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "valueType": "number",
-          "name": "columns",
-          "value": "",
-          "label": "Columns"
-        },
-        {
-          "component": "text",
-          "valueType": "number",
-          "name": "rows",
-          "value": "",
-          "label": "Rows"
+            "id": "column",
+            "components": [
+                "text",
+                "image",
+                "button",
+                "title"
+            ]
         }
-      ]
-    }
-  ],
-  "filters": [
-    {
-      "id": "columns",
-      "components": [
-        "column"
-      ]
-    },
-    {
-      "id": "column",
-      "components": [
-        "text",
-        "image",
-        "button",
-        "title"
-      ]
-    }
-  ]
+    ]
 }

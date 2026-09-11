@@ -259,44 +259,44 @@
       },
       {
         "component": "richtext",
-        "name": "textBig",
+        "name": "title",
         "value": "",
-        "label": "TextBig",
+        "label": "Title",
         "valueType": "string"
       },
       {
         "component": "richtext",
-        "name": "textSmall",
+        "name": "description",
         "value": "",
-        "label": "TextSmall",
+        "label": "Description",
         "valueType": "string"
       },
       {
         "component": "text",
-        "name": "primaryLabel",
+        "name": "buttonOneLabel",
         "value": "",
-        "label": "Primary CTA",
+        "label": "Button One Label",
         "valueType": "string"
       },
       {
         "component": "text",
-        "name": "primaryLink",
+        "name": "buttonOneLink",
         "value": "",
-        "label": "Primary Link",
+        "label": "Button One Link",
         "valueType": "string"
       },
       {
         "component": "text",
-        "name": "secondaryLabel",
+        "name": "buttonTwoLabel",
         "value": "",
-        "label": "Secondary CTA",
+        "label": "Button Two Label",
         "valueType": "string"
       },
       {
         "component": "text",
-        "name": "secondaryLink",
+        "name": "buttonTwoLink",
         "value": "",
-        "label": "Secondary Link",
+        "label": "Button Two Link",
         "valueType": "string"
       }
     ]

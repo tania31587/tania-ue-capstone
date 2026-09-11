@@ -1,9 +1,8 @@
 export default function decorate(block) {
     const rows = [...block.children];
-    const titleRow = rows.find((row) => row.querySelector('h1'));
-    const descriptionRow = rows.find((row) => row.querySelector('h5'));
-    const eyebrowRow = rows.find(
-        (row) => row.textContent.trim() === 'WKND ADVENTURES', );
+    const eyebrowRow = rows[1];
+    const titleRow = rows[2];
+    const descriptionRow = rows[3];
     if (eyebrowRow) {
         eyebrowRow.classList.add('hero-eyebrow');
     }

@@ -661,3 +661,9 @@ main .highlight {
         padding-right: initial;
     }
 }
+
+@media (max-width: 480px) {
+    .section.brief-planning-section .button-wrapper a {
+        white-space: normal;
+    }
+}

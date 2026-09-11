@@ -1,7 +1,8 @@
 .hero-container,
 .hero-wrapper {
-    max-width: unset;
-    padding: 0;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .hero {
@@ -12,6 +13,7 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    margin-left: calc(50% - 50vw);
 }
 
 
@@ -50,9 +52,10 @@
 .hero-description,
 .hero-actions {
     max-width: 980px;
-    padding-left: 60px;
     position: relative;
     z-index: 2;
+    /* max-width: 1180px; */
+    padding-left: 210px;
 }
 
 
@@ -137,20 +140,39 @@
 }
 
 @media (max-width: 768px) {
-    .hero {
-        min-height: 450px;
-    }
     .hero-eyebrow,
     .hero-title,
     .hero-description,
     .hero-actions {
-        max-width: none;
+        max-width: 100%;
         margin: 0;
-        padding: 0 24px;
+        padding-left: 150px;
+        padding-right: 24px;
+    }
+    .hero-title h1 {
+        font-size: 42px;
+        line-height: 1;
     }
     .hero-description p,
     .hero-description h5 {
         max-width: 100%;
+        width: 100%;
+    }
+    .hero-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 468px) {
+    .hero-eyebrow,
+    .hero-title,
+    .hero-description,
+    .hero-actions {
+        max-width: 100%;
+        margin: 0;
+        padding-left: 50px;
+        padding-right: 24px;
     }
 }
 
